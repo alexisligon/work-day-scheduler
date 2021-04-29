@@ -1,4 +1,3 @@
-//time display at top of webpage
 var timeDisplayEl = $('#currentDay');
 
 function displayTime() {
@@ -7,45 +6,96 @@ function displayTime() {
 }
 setInterval(displayTime, 1000);
 
-//--------------------------
-//array for work hours in the day
-var workHours = ['9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm']
+getText();
 
-//function to display table
-function displayHours (hour) {
-  var hourRow = $('<tr>');//creat a table row
+function getText() {
+    var chngTxt9 = localStorage.getItem('9am');
+    $('#9text').text(chngTxt9);
 
-  var hourDisplay = $('<td>').addClass('p-2').text('hour');//create a data cell to display the hour
+    var chngTxt10 = localStorage.getItem('10am');
+    $('#10text').text(chngTxt10);
 
-  var todoBox = $('<td>').addClass('p-2');//create a data cell to write out todos
-  var todoInput = $('<textarea>');//creates text area for input
-  todoBox.append(todoInput);//inserts a text area box to the data cell
+    var chngTxt11 = localStorage.getItem('11am');
+    $('#11text').text(chngTxt11);
 
-  var saveBox = $('<td>').addClass('p-2');//create a data cell for save button
-  var saveBtn = $('<button>').addClass('btn btn-primary btn-lg saveBtn').text('save').attr('data-time', hour);//creates the button
-  
-  saveBox.append(saveBtn);//inserts a button into the box
+    var chngTxt12 = localStorage.getItem('12pm');
+    $('#12text').text(chngTxt12);
 
-  var nextHour = moment().format('hh a');
-  console.log(nextHour);
+    var chngTxt1 = localStorage.getItem('1pm');
+    $('#1text').text(chngTxt1);
 
-  hourDisplay.text(hour);
-  console.log(hourDisplay);
+    var chngTxt2 = localStorage.getItem('2pm');
+    $('#2text').text(chngTxt2);
 
-$('#todo-display').append(hourRow);//appends the row to the table
-  hourRow.append(hourDisplay);//appends the hour to the row
-  hourRow.append(todoBox);//appends the textbox to the row
-hourRow.append(saveBox);//appends the save box to the row
+    var chngTxt3 = localStorage.getItem('3pm');
+    $('#3text').text(chngTxt3);
+
+    var chngTxt4 = localStorage.getItem('4pm');
+    $('#4text').text(chngTxt4);
+
+    var chngTxt5 = localStorage.getItem('5pm');
+    $('#5text').text(chngTxt5);
 }
 
-//displays a new row for each hour in the array
-for (var i = 0; i < workHours.length; i++) {
-  displayHours(workHours[i]);
-}
+$('#9am').on('click', function (){
+    console.log('9am button clicked');
+    var nineText = $('#9text').val();
+    console.log(nineText);
+    localStorage.setItem('9am', nineText);
+})
 
-//---------------
+$('#10am').on('click', function (){
+    console.log('10am button clicked');
+    var tenText = $('#10text').val();
+    console.log(tenText);
+    localStorage.setItem('10am', tenText);
+})
 
-$('.saveBtn').on('click', function(){
-  $('data-time')
-});
-console.log('button click')
+$('#11am').on('click', function (){
+    console.log('11am button clicked');
+    var elevenText = $('#11text').val();
+    console.log(elevenText);
+    localStorage.setItem('11am', elevenText);
+})
+
+$('#12pm').on('click', function (){
+    console.log('12pm button clicked');
+    var twelveText = $('#12text').val();
+    console.log(twelveText);
+    localStorage.setItem('12pm', twelveText);
+})
+
+$('#1pm').on('click', function (){
+    console.log('1pm button clicked');
+    var oneText = $('#1text').val();
+    console.log(oneText);
+    localStorage.setItem('1pm', oneText);
+})
+
+$('#2pm').on('click', function (){
+    console.log('2pm button clicked');
+    var twoText = $('#2text').val();
+    console.log(twoText);
+    localStorage.setItem('2pm', twoText);
+})
+
+$('#3pm').on('click', function (){
+    console.log('3pm button clicked');
+    var threeText = $('#3text').val();
+    console.log(threeText);
+    localStorage.setItem('3pm', threeText);
+})
+
+$('#4pm').on('click', function (){
+    console.log('4pm button clicked');
+    var fourText = $('#4text').val();
+    console.log(fourText);
+    localStorage.setItem('4pm', fourText);
+})
+
+$('#5pm').on('click', function (){
+    console.log('5pm button clicked');
+    var fiveText = $('#5text').val();
+    console.log(fiveText);
+    localStorage.setItem('5pm', fiveText);
+})
