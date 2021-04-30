@@ -109,27 +109,17 @@ $('#5pm').on('click', function (){
 var current = moment().format('hh a');
 
 var eightAm = moment("08 am", "hh a").format("hh a");
-console.log(eightAm);
 var nineAm = moment("09 am", "hh a").format("hh a");
-console.log(nineAm);
 var tenAm = moment("10 am", "hh a").format("hh a");
-console.log(tenAm)
 var elevenAm = moment("11 am", "hh a").format("hh a");
-console.log(elevenAm)
 var twelvePm = moment("12 pm", "hh a").format("hh a");
-console.log(twelvePm)
 var onePm = moment("01 pm", "hh a").format("hh a")
-console.log(onePm)
 var twoPm = moment("02 pm", "hh a").format("hh a")
-console.log(twoPm)
 var threePm = moment("03 pm", "hh a").format("hh a")
-console.log(threePm)
 var fourPm = moment("04 pm", "hh a").format("hh a")
-console.log(fourPm)
 var fivePm = moment("05 pm", "hh a").format("hh a")
-console.log(fivePm)
 var sixPm = moment("06 pm", "hh a").format("hh a")
-console.log(sixPm)
+
 var nineRow = $('#nineRow');
 
 if (current < tenAm) {
