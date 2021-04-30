@@ -121,6 +121,14 @@ var fivePm = moment("05 pm", "hh a").format("hh a")
 var sixPm = moment("06 pm", "hh a").format("hh a")
 
 var nineRow = $('#nineRow');
+var tenRow = $('#tenRow');
+var elevenRow = $("#elevenRow");
+var twelveRow = $('#twelveRow');
+var oneRow = $('#oneRow');
+var twoRow = $('#twoRow');
+var threeRow = $('#threeRow');
+var fourRow = $('#fourRow');
+var fiveRow = $('#fiveRow');
 
 if (current < tenAm) {
     nineRow.attr('class', 'present');
