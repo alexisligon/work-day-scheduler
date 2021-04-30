@@ -1,10 +1,10 @@
-var timeDisplayEl = $('#currentDay');
+// var timeDisplayEl = $('#currentDay');
 
-function displayTime() {
-  var rightNow = moment().format('MMM DD, YYYY [at] hh:mm:ss a');
-  timeDisplayEl.text(rightNow);
-}
-setInterval(displayTime, 1000);
+// function displayTime() {
+//   var rightNow = moment().format('MMM DD, YYYY [at] hh:mm:ss a');
+//   timeDisplayEl.text(rightNow);
+// }
+// setInterval(displayTime, 1000);
 
 getText();
 
@@ -99,3 +99,39 @@ $('#5pm').on('click', function (){
     console.log(fiveText);
     localStorage.setItem('5pm', fiveText);
 })
+
+//if else statement for conditional timing with colorblocks
+
+//if the current time is less than 9am(for example), then change color class to past ELSE
+//if current time is equal to or greater than, change color class to present ELSE
+//if current time greater than 1 hour change color class to future
+
+var current = moment().format('hh a');
+
+var eightAm = moment("08 am", "hh a").format("hh a");
+console.log(eightAm);
+var nineAm = moment("09 am", "hh a").format("hh a");
+console.log(nineAm);
+var tenAm = moment("10 am", "hh a").format("hh a");
+console.log(tenAm)
+var elevenAm = moment("11 am", "hh a").format("hh a");
+console.log(elevenAm)
+var twelvePm = moment("12 pm", "hh a").format("hh a");
+console.log(twelvePm)
+var onePm = moment("01 pm", "hh a").format("hh a")
+console.log(onePm)
+var twoPm = moment("02 pm", "hh a").format("hh a")
+console.log(twoPm)
+var threePm = moment("03 pm", "hh a").format("hh a")
+console.log(threePm)
+var fourPm = moment("04 pm", "hh a").format("hh a")
+console.log(fourPm)
+var fivePm = moment("05 pm", "hh a").format("hh a")
+console.log(fivePm)
+var sixPm = moment("06 pm", "hh a").format("hh a")
+console.log(sixPm)
+var nineRow = $('#nineRow');
+
+if (current < tenAm) {
+    nineRow.attr('class', 'present');
+}
