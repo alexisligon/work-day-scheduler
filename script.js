@@ -1,10 +1,10 @@
-// var timeDisplayEl = $('#currentDay');
+var timeDisplayEl = $('#currentDay');
 
-// function displayTime() {
-//   var rightNow = moment().format('MMM DD, YYYY [at] hh:mm:ss a');
-//   timeDisplayEl.text(rightNow);
-// }
-// setInterval(displayTime, 1000);
+function displayTime() {
+  var rightNow = moment().format('MMM DD, YYYY [at] hh:mm:ss a');
+  timeDisplayEl.text(rightNow);
+}
+setInterval(displayTime, 1000);
 
 getText();
 
@@ -130,6 +130,85 @@ var threeRow = $('#threeRow');
 var fourRow = $('#fourRow');
 var fiveRow = $('#fiveRow');
 
-if (current < tenAm) {
-    nineRow.attr('class', 'present');
+//for nine am row
+if (current === nineAm){
+    nineRow.addClass('present')
+} else if (current > nineAm) {
+    nineRow.addClass('past')
+} else {
+    nineRow.addClass('future')
 }
+
+
+//for ten am row
+if (current === tenAm){
+    tenRow.addClass('present')
+} else if (current > tenAm) {
+    tenRow.addClass('past')
+} else {
+    tenRow.addClass('future')
+}
+
+//for eleven am row
+if (current === elevenAm){
+    elevenRow.addClass('present')
+} else if (current > elevenAm) {
+    elevenRow.addClass('past')
+} else {
+    elevenRow.addClass('future')
+}
+
+//for twelve pm row
+if (current === twelvePm){
+    twelveRow.addClass('present')
+} else if (current > twelvePm) {
+    twelveRow.addClass('past')
+} else {
+    twelveRow.addClass('future')
+}
+
+//for one pm row
+if (current === onePm){
+    oneRow.addClass('present')
+} else if (current > onePm) {
+    oneRow.addClass('past')
+} else {
+    oneRow.addClass('future')
+}
+
+//for two pm row
+if (current === twoPm) {
+    twoRow.addClass('present')
+} else if (current > twoPm) {
+    twoRow.addClass('past')
+} else {
+    twoRow.addClass('future')
+}
+
+//for three pm row
+if (current === threePm) {
+    threeRow.addClass('present')
+} else if (current > threePm) {
+    threeRow.addClass('past')
+} else {
+    threeRow.addClass('future')
+}
+
+//for four pm row
+if (current === fourPm){
+    fourRow.addClass('present')
+} else if (current > fourPm) {
+    fourRow.addClass('past')
+} else {
+    fourRow.addClass('future')
+}
+
+//for five pm row
+if (current === fivePm){
+    fiveRow.addClass('present')
+} else if (current > fivePm) {
+    fiveRow.addClass('past')
+} else {
+    fiveRow.addClass('future')
+}
+
