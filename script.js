@@ -100,17 +100,13 @@ $('#5pm').on('click', function (){
     localStorage.setItem('5pm', fiveText);
 })
 
-//if else statement for conditional timing with colorblocks
 
-//if the current time is less than 9am(for example), then change color class to past ELSE
-//if current time is equal to or greater than, change color class to present ELSE
-//if current time greater than 1 hour change color class to future
-
+//variable for the current time to compare with row times
 var current = moment().hour();
 console.log(current);
 console.log(nineAm);
 
-
+//variables for each row's hours
 var eightAm = moment("08 am", "hh a").hour();
 var nineAm = moment("09 am", "hh a").hour();
 console.log(nineAm)
@@ -124,6 +120,7 @@ var fourPm = moment("04 pm", "hh a").hour()
 var fivePm = moment("05 pm", "hh a").hour()
 var sixPm = moment("06 pm", "hh a").hour()
 
+//variable for each row to add class for color
 var nineRow = $('#nineRow');
 var tenRow = $('#tenRow');
 var elevenRow = $("#elevenRow");
