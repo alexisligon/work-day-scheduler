@@ -106,7 +106,8 @@ $('#5pm').on('click', function (){
 //if current time is equal to or greater than, change color class to present ELSE
 //if current time greater than 1 hour change color class to future
 
-var current = moment().format('hh a');
+var current = moment().hour();
+
 
 var eightAm = moment("08 am", "hh a").format("hh a");
 var nineAm = moment("09 am", "hh a").format("hh a");
@@ -129,6 +130,7 @@ var twoRow = $('#twoRow');
 var threeRow = $('#threeRow');
 var fourRow = $('#fourRow');
 var fiveRow = $('#fiveRow');
+
 
 //for nine am row
 if (current === nineAm){
