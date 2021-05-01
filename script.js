@@ -107,19 +107,22 @@ $('#5pm').on('click', function (){
 //if current time greater than 1 hour change color class to future
 
 var current = moment().hour();
+console.log(current);
+console.log(nineAm);
 
 
-var eightAm = moment("08 am", "hh a").format("hh a");
-var nineAm = moment("09 am", "hh a").format("hh a");
-var tenAm = moment("10 am", "hh a").format("hh a");
-var elevenAm = moment("11 am", "hh a").format("hh a");
-var twelvePm = moment("12 pm", "hh a").format("hh a");
-var onePm = moment("01 pm", "hh a").format("hh a")
-var twoPm = moment("02 pm", "hh a").format("hh a")
-var threePm = moment("03 pm", "hh a").format("hh a")
-var fourPm = moment("04 pm", "hh a").format("hh a")
-var fivePm = moment("05 pm", "hh a").format("hh a")
-var sixPm = moment("06 pm", "hh a").format("hh a")
+var eightAm = moment("08 am", "hh a").hour();
+var nineAm = moment("09 am", "hh a").hour();
+console.log(nineAm)
+var tenAm = moment("10 am", "hh a").hour();
+var elevenAm = moment("11 am", "hh a").hour();
+var twelvePm = moment("12 pm", "hh a").hour();
+var onePm = moment("01 pm", "hh a").hour()
+var twoPm = moment("02 pm", "hh a").hour()
+var threePm = moment("03 pm", "hh a").hour()
+var fourPm = moment("04 pm", "hh a").hour()
+var fivePm = moment("05 pm", "hh a").hour()
+var sixPm = moment("06 pm", "hh a").hour()
 
 var nineRow = $('#nineRow');
 var tenRow = $('#tenRow');
