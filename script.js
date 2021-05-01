@@ -38,78 +38,58 @@ function getText() {
 }
 
 $('#9am').on('click', function (){
-    console.log('9am button clicked');
     var nineText = $('#9text').val();
-    console.log(nineText);
     localStorage.setItem('9am', nineText);
 })
 
 $('#10am').on('click', function (){
-    console.log('10am button clicked');
     var tenText = $('#10text').val();
-    console.log(tenText);
     localStorage.setItem('10am', tenText);
 })
 
 $('#11am').on('click', function (){
-    console.log('11am button clicked');
     var elevenText = $('#11text').val();
-    console.log(elevenText);
     localStorage.setItem('11am', elevenText);
 })
 
 $('#12pm').on('click', function (){
-    console.log('12pm button clicked');
     var twelveText = $('#12text').val();
-    console.log(twelveText);
     localStorage.setItem('12pm', twelveText);
 })
 
 $('#1pm').on('click', function (){
-    console.log('1pm button clicked');
     var oneText = $('#1text').val();
-    console.log(oneText);
     localStorage.setItem('1pm', oneText);
 })
 
 $('#2pm').on('click', function (){
-    console.log('2pm button clicked');
     var twoText = $('#2text').val();
-    console.log(twoText);
     localStorage.setItem('2pm', twoText);
 })
 
 $('#3pm').on('click', function (){
-    console.log('3pm button clicked');
     var threeText = $('#3text').val();
-    console.log(threeText);
     localStorage.setItem('3pm', threeText);
 })
 
 $('#4pm').on('click', function (){
-    console.log('4pm button clicked');
     var fourText = $('#4text').val();
-    console.log(fourText);
     localStorage.setItem('4pm', fourText);
 })
 
 $('#5pm').on('click', function (){
-    console.log('5pm button clicked');
     var fiveText = $('#5text').val();
-    console.log(fiveText);
     localStorage.setItem('5pm', fiveText);
 })
 
 
 //variable for the current time to compare with row times
 var current = moment().hour();
-console.log(current);
-console.log(nineAm);
+
 
 //variables for each row's hours
 var eightAm = moment("08 am", "hh a").hour();
 var nineAm = moment("09 am", "hh a").hour();
-console.log(nineAm)
 var tenAm = moment("10 am", "hh a").hour();
 var elevenAm = moment("11 am", "hh a").hour();
 var twelvePm = moment("12 pm", "hh a").hour();
